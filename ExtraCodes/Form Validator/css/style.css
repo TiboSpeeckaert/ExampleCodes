@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  background-color: #333333;
+  width: 100%;
+  max-width: 920px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container img {
+  width: 50%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.container form {
+  width: 50%;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  outline: none;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: #444444;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #666666;
+}
+
+.form-control .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: transparent;
+  pointer-events: none;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  border-color: #00ff00;
+}
+
+.form-control.success .icon {
+  color: #00ff00;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+  border-color: #ff0000;
+}
+
+.form-control.error .icon,
+.form-control.error input::placeholder,
+.form-control.error textarea::placeholder {
+  color: #ff0000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #888;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.close-button {
+  color: #666666;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+  .container img {
+    display: none;
+  }
+
+  .container form {
+    width: 100%;
+  }
+}
